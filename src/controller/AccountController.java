@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * 메뉴 흐름을 제어하는 컨트롤러 클래스
- * 담당: 팀원C
  */
 public class AccountController {
 
@@ -21,7 +20,6 @@ public class AccountController {
 
     /**
      * 메뉴 루프
-     * 커밋1: Controller 메뉴 루프
      */
     public void run() {
         boolean running = true;
@@ -68,7 +66,6 @@ public class AccountController {
 
     /**
      * 각 기능 처리
-     * 커밋2: Controller 각 기능 처리
      */
     private void openAccount() {
         String ownerName = accountView.inputOwnerName();
