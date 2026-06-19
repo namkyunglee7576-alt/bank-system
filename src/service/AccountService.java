@@ -16,4 +16,13 @@ public class AccountService {
         this.accountRepository = accountRepository;
     }
     
+    // 단건조회
+    public Account findAccount(String accountNumber) {
+        Account account = accountRepository.findById(accountNumber);
+        if (account == null) {
+            throw new IllegalArgumentException("존재하지 않는 계좌번호입니다: " + accountNumber);
+        }
+        return account;
+    }
+    
 }
