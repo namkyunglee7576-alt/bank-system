@@ -30,6 +30,7 @@ public class AccountService {
             throw new IllegalArgumentException("출금액은 0원보다 커야 합니다.");
         }
         Account account = findAccount(accountNumber);
+    }
 
     
     /**
