@@ -1,6 +1,5 @@
 package service;
 
-
 import model.Account;
 import repository.AccountRepository;
 import java.util.List;
@@ -103,4 +102,3 @@ public class AccountService {
         accountRepository.delete(accountNumber);
     }
 }
-
