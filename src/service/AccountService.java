@@ -24,13 +24,6 @@ public class AccountService {
         }
         return account;
     }
-    
-    public void withdraw(String accountNumber, long amount) {
-        if (amount <= 0) {
-            throw new IllegalArgumentException("출금액은 0원보다 커야 합니다.");
-        }
-        Account account = findAccount(accountNumber);
-    }
 
     
     /**
@@ -50,6 +43,9 @@ public class AccountService {
      * 출금 (잔액 부족 시 예외처리)
      */
     public void withdraw(String accountNumber, long amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("출금액은 0원보다 커야 합니다.");
+        }
     	Account account = findAccount(accountNumber);
         if (account.getBalance() < amount) {
             throw new IllegalStateException("잔액이 부족합니다. 현재 잔액: " + account.getBalance() + "원");
