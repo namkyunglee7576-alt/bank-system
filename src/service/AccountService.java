@@ -29,4 +29,8 @@ public class AccountService {
         return accountRepository.save(ownerName, initialBalance);
     }
     
+//    전체 계좌 조회
+    public List<Account> findAllAccounts() {
+        return accountRepository.findAll();
+    }
 }
