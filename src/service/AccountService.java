@@ -25,11 +25,13 @@ public class AccountService {
         return account;
     }
     
+    // 출금조회
     public void withdraw(String accountNumber, long amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("출금액은 0원보다 커야 합니다.");
         }
         Account account = findAccount(accountNumber);
+    }
 
     
     /**
