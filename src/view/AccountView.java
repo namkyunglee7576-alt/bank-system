@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 /**
  * 콘솔 입출력을 담당하는 뷰 클래스
- * 담당: 팀원D (또는 팀원C 겸임)
  */
 public class AccountView {
 
