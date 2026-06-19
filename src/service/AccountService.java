@@ -47,7 +47,24 @@ public class AccountService {
         return accountRepository.save(ownerName, initialBalance);
     }
     
-//    전체 계좌 조회
+    /**
+     * 출금 (잔액 부족 시 예외처리)
+     */
+    public void withdraw(String accountNumber, long amount) {
+    	Account account = findAccount(accountNumber);
+        if (account.getBalance() < amount) {
+            throw new IllegalStateException("잔액이 부족합니다. 현재 잔액: " + account.getBalance() + "원");
+        }
+        account.withdraw(amount);
+    }
+    
+    
+	private Account findAccount(String accountNumber) {
+			// TODO Auto-generated method stub
+			return null;
+		} 
+
+	//    전체 계좌 조회
     public List<Account> findAllAccounts() {
         return accountRepository.findAll();
     }
