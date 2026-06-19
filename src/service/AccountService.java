@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * 계좌 관련 비즈니스 로직을 처리하는 서비스 클래스
- * 담당: 팀원B
  */
 public class AccountService {
 
@@ -18,7 +17,6 @@ public class AccountService {
 
     /**
      * 계좌 개설
-     * 커밋1: 계좌개설 구현
      */
     public Account openAccount(String ownerName, long initialBalance) {
         if (ownerName == null || ownerName.trim().isEmpty()) {
@@ -50,7 +48,6 @@ public class AccountService {
 
     /**
      * 입금
-     * 커밋2: 입출금 구현
      */
     public void deposit(String accountNumber, long amount) {
         if (amount <= 0) {
@@ -62,7 +59,6 @@ public class AccountService {
 
     /**
      * 출금 (잔액 부족 시 예외처리)
-     * 커밋2: 입출금 구현
      */
     public void withdraw(String accountNumber, long amount) {
         if (amount <= 0) {
@@ -77,7 +73,6 @@ public class AccountService {
 
     /**
      * 이체 (출금 계좌 -> 입금 계좌)
-     * 커밋3: 이체/해지 구현
      */
     public void transfer(String fromAccountNumber, String toAccountNumber, long amount) {
         if (fromAccountNumber.equals(toAccountNumber)) {
@@ -92,7 +87,6 @@ public class AccountService {
 
     /**
      * 계좌 해지 (잔액 0 확인 후 삭제)
-     * 커밋3: 이체/해지 구현
      */
     public void closeAccount(String accountNumber) {
         Account account = findAccount(accountNumber);
