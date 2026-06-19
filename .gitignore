@@ -4,6 +4,7 @@
 ### Eclipse ###
 .metadata
 bin/
+.DS_Store
 tmp/
 *.tmp
 *.bak
